@@ -16,11 +16,11 @@ We will follow REST patterns while building our .NET API.
 
 
 ## Screenshots
-![Example screenshot](screenshort/secreen-allApi.jpg)
-![Example screenshot](screenshort/secreen-get.jpg)
-![Example screenshot](screenshort/secreen-post.jpg)
-![Example screenshot](screenshort/secreen-put.jpg)
-![Example screenshot](screenshort/secreen-delete.jpg)
+![Example screenshot](screenshort/screen-allApi.jpg)
+![Example screenshot](screenshort/screen-get.jpg)
+![Example screenshot](screenshort/screen-post.jpg)
+![Example screenshot](screenshort/screen-put.jpg)
+![Example screenshot](screenshort/screen-delete.jpg)
 
 
 
