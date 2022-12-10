@@ -1,0 +1,57 @@
+-	Selected 'Asp.NET Core Web API'
+-	Write name 'CustomersAPI'
+-	Framework : .Net 6.0 // Authentication Type : None
+	Select 'Configure for HTTPs'
+	Select 'Use Controllers ...'
+	Select 'Enable OpenAPI support'
+	
+- install npm packet 'Microsoft.EntityFrameworkCore.InMemory'
+version : 6.0.xx
+
+-	Add new folder > Models
+-	Add new Class > Models > Customers.cs
+-	Add new folder > Data
+-	Add new Class > Data > CustomersAPIDbContext.cs
+-	Add new value in Program.cs
+	builder.Services.AddDbContext<CustomersAPIDbContext>(
+    options => options.UseInMemoryDatabase("CustomerDb")
+    );
+
+-	Add new Controller > Controllers > CustomersController.cs
+
+-	Add new class > Models > AddCustomersRequest.cs
+-	Add new class > Models > UpdateCustomerRequest.cs
+-	install npm packet > 6.0.xx
+	- Microsoft.EntityFrameworkCore
+	- Microsoft.EntityFrameworkCore.SqlServer
+	- Microsoft.EntityFrameworkCore.Tools
+
+-	Add new value in appsettings.json
+	"ConnectionStrings": {
+    "CustomerApiConnectionString": "Server=.;Database=CustomerDb;Trusted_Connection=true"
+  }
+  
+- Replace the link address with the new address. in Program.cs
+		builder.Services.AddDbContext<CustomersAPIDbContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("CustomerApiConnectionString")));
+
+- Open Package Manager Console
+	- Add-Migration "init migration"
+	- Update-database
+
+
+////////////////////// CI & CD /////////////////////
+-	Create Web App
+-	Subscription : Concierge Subscription ;
+	Resource Group: learn-2999 ....vss (Free sign)
+	Name : project name
+	Publish: Code
+	Runtime stack: .Net 6
+	Operating System: Windows
+	Region: CentralUs
+	WindwsPlan: Create New : FTHWebApp1-Plan
+	Next ->> Deployment Next -->> Networking -->>Next
+	Tags -->> Next Review+create -- >> Create
+	
+	
+	
